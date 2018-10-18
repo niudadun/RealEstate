@@ -1,0 +1,171 @@
+﻿@model RealEstate.ViewModels.PlanetDetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="super_container">
+
+    <div class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="intro_content d-flex flex-lg-row flex-column align-items-start justify-content-start">
+                        <div class="intro_title_container">
+                            <div class="intro_title">@Model.Planet.Name with galaxy view</div>
+                            <div class="intro_tags">
+                                <ul>
+                                    <li><a href="#">Galaxy</a></li>
+                                    <li><a href="#">Universe</a></li>
+                                    <li><a href="#">Space</a></li>
+                                    <li><a href="#">galaxy view</a></li>
+                                    <li><a href="#">planet sale</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="intro_price_container ml-lg-auto d-flex flex-column align-items-start justify-content-center">
+                            <div>For Sale</div>
+                            <div class="intro_price">$@Model.Planet.Price million</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="planetdetails">           
+            <img src="~/images/@Model.Planet.DetailImage">
+
+        </div>
+    </div>
+
+    <!-- Planet description -->
+    <div class="planetDetails">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <div class="sidebar_search">
+                            <div class="sidebar_search_title">Explore Planets</div>
+                            <div class="sidebar_search_form_container">
+                                <form asp-action="Index" asp-controller="Planets" class="sidebar_search_form" id="sidebar_search_form">
+                                    <select class="sidebar_search_select">
+                                        <option disabled selected>Keywords</option>
+                                        <option>Galaxy</option>
+                                        <option>Space</option>
+                                        <option>Universe</option>
+                                        <option>Planet</option>
+                                    </select>
+                                    <select class="sidebar_search_select">
+                                        <option disabled selected>Planet shape</option>
+                                        <option>Round</option>
+                                        <option>Sphere</option>
+                                        <option>Disk</option>
+                                        <option>Patato</option>
+                                    </select>
+                                    <select class="sidebar_search_select">
+                                        <option disabled selected>Planet Color</option>
+                                        <option>Blue</option>
+                                        <option>Yellow</option>
+                                        <option>Red</option>
+                                        <option>Black</option>
+                                    </select>
+                                    <button class="sidebar_search_button search_form_button">search</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Realtor -->
+                        <div class="sidebar_realtor">
+                            <div class="sidebar_realtor_image"><img src="~/images/realtor.jpg" alt=""></div>
+                            <div class="sidebar_realtor_body text-center">
+                                <div class="sidebar_realtor_title"><a>Neil Niu</a></div>
+                                <div class="sidebar_realtor_subtitle">Senior Realtor</div>
+                                <div class="sidebar_realtor_phone"><span>call us: </span>0412 85 4532</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- planetDetails Content -->
+                <div class="col-lg-7 offset-lg-1">
+                    <div class="planetDetails_content">
+                        <div class="planetDetails_icons">
+                            <div class="planetDetails_title">Extra Facilities</div>
+                            <div class="planetDetails_text planetDetails_text_1">
+                                <p>Aside from planet Earth, It is the most explored planet. Many space probes have visited and landed to gather data.</p>
+                            </div>
+                            <div class="planetDetails_features d-flex flex-sm-row flex-column align-items-start justify-content-start">
+
+                                <div class="planetDetails_feature">
+                                    <div class="planetDetails_feature_title">To earth million/km</div>
+                                    <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_num">40</div>
+                                    </div>
+                                </div>
+
+                                <div class="planetDetails_feature">
+                                    <div class="planetDetails_feature_title">Diameter km</div>
+                                    <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_num">12,100</div>
+                                    </div>
+                                </div>
+
+                                <div class="planetDetails_feature">
+                                    <div class="planetDetails_feature_title">Orbital speed km/s</div>
+                                    <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_num">35</div>
+                                    </div>
+                                </div>
+
+                                <div class="planetDetails_feature">
+                                    <div class="planetDetails_feature_title">Volcanoes</div>
+                                    <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_num">167</div>
+                                    </div>
+                                </div>
+
+                                <div class="planetDetails_feature">
+                                    <div class="planetDetails_feature_title">Moutain</div>
+                                    <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_num">21</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+
+                        <div class="planetDetails_description">
+                            <div class="planetDetails_title">Description</div>
+                            <div class="planetDetails_text planetDetails_text_2">
+                                <p>
+                                    The diameter of it is 12,100 km (7,522 miles).
+                                    The interior of it is composed of a central iron core and a molten rocky mantle, similar to the composition of Earth.
+                                    The surface of it is very dry with flat plains, highland regions, and depressions.
+                                    It is the sixth largest planet in the Solar System.
+                                    It is the second closest planet to the Sun. Planet it is named after the Roman goddess of love and beauty.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Additional Details -->
+
+                        <div class="additional_details">
+                            <div class="planetDetails_title">Additional Details</div>
+                            <div class="details_container">
+                                <ul>
+                                    <li>Similar in size, density, and mass of Earth often referred to as sister planets.</li>
+                                    <li>It is the hottest planet in the Solar System.</li>
+                                    <li>It takes 243 days for it to rotate on its axis</li>
+                                    <li>The clouds surrounding it are comprised mostly of sulfuric acid</li>
+                                    <li>It rotate from East to West</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

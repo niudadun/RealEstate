@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Real Estate</title>
+
+    <environment>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/responsive.css" />
+        <link rel="stylesheet" href="~/css/planetDetails.css" />
+    </environment>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo">
+                            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Universe Real Estate</a>
+                        </div>
+
+                        <div class="phone_num ml-auto">
+                            <div class="phone_num_inner">
+                                <img src="images/phone.png" alt=""><span>0061 412 85 4532</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <partial name="_CookieConsentPartial" />
+    @RenderBody()
+
+
+
+    <environment>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/main.js"></script>
+    </environment>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
