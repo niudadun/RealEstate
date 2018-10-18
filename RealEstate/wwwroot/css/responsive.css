@@ -172,6 +172,14 @@
 		height: 40px;
 		width: calc(100% + 20px);
 	}
+    .property_tag {
+        height: 28px;
+    }
+
+    .property_tag a {
+        font-size: 12px;
+        line-height: 28px;
+    }
 	.testimonial_col:not(:last-child)
 	{
 		margin-bottom: 60px;

@@ -45,7 +45,7 @@
                         <div class="sidebar_search">
                             <div class="sidebar_search_title">Explore Planets</div>
                             <div class="sidebar_search_form_container">
-                                <form asp-action="Index" asp-controller="Planets" class="sidebar_search_form" id="sidebar_search_form">
+                                <form asp-action="Index" asp-controller="SearchPlanets" class="sidebar_search_form" id="sidebar_search_form">
                                     <select class="sidebar_search_select">
                                         <option disabled selected>Keywords</option>
                                         <option>Galaxy</option>
@@ -54,20 +54,20 @@
                                         <option>Planet</option>
                                     </select>
                                     <select class="sidebar_search_select">
-                                        <option disabled selected>Planet shape</option>
+                                        <option disabled selected>@Model.Planet.Shape</option>
                                         <option>Round</option>
                                         <option>Sphere</option>
                                         <option>Disk</option>
                                         <option>Patato</option>
                                     </select>
                                     <select class="sidebar_search_select">
-                                        <option disabled selected>Planet Color</option>
+                                        <option disabled selected>@Model.Planet.Color</option>
                                         <option>Blue</option>
                                         <option>Yellow</option>
                                         <option>Red</option>
-                                        <option>Black</option>
+                                        <option>Grey</option>
                                     </select>
-                                    <button class="sidebar_search_button search_form_button">search</button>
+                                    <button class="sidebar_search_button search_form_button">Explore</button>
                                 </form>
                             </div>
                         </div>
@@ -88,47 +88,39 @@
                 <div class="col-lg-7 offset-lg-1">
                     <div class="planetDetails_content">
                         <div class="planetDetails_icons">
-                            <div class="planetDetails_title">Extra Facilities</div>
+                            <div class="planetDetails_title">Basic Infomation</div>
                             <div class="planetDetails_text planetDetails_text_1">
                                 <p>Aside from planet Earth, It is the most explored planet. Many space probes have visited and landed to gather data.</p>
                             </div>
                             <div class="planetDetails_features d-flex flex-sm-row flex-column align-items-start justify-content-start">
 
                                 <div class="planetDetails_feature">
-                                    <div class="planetDetails_feature_title">To earth million/km</div>
+                                    <div class="planetDetails_feature_title">Main color of the planet</div>
                                     <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_num">40</div>
+                                        <div class="feature_num">@Model.Planet.Color</div>
                                     </div>
                                 </div>
 
                                 <div class="planetDetails_feature">
-                                    <div class="planetDetails_feature_title">Diameter km</div>
+                                    <div class="planetDetails_feature_title">Planet basic shape in Space</div>
                                     <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_num">12,100</div>
+                                        <div class="feature_num">@Model.Planet.Shape</div>
                                     </div>
                                 </div>
 
                                 <div class="planetDetails_feature">
-                                    <div class="planetDetails_feature_title">Orbital speed km/s</div>
+                                    <div class="planetDetails_feature_title">The size type in universe</div>
                                     <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_num">35</div>
+                                        <div class="feature_num">@Model.Planet.Size</div>
                                     </div>
                                 </div>
 
                                 <div class="planetDetails_feature">
-                                    <div class="planetDetails_feature_title">Volcanoes</div>
+                                    <div class="planetDetails_feature_title">Sell Type or any promotion</div>
                                     <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_num">167</div>
+                                        <div class="feature_num">@Model.Planet.SellType</div>
                                     </div>
                                 </div>
-
-                                <div class="planetDetails_feature">
-                                    <div class="planetDetails_feature_title">Moutain</div>
-                                    <div class="planetDetails_feature_content d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_num">21</div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
 
@@ -138,7 +130,7 @@
                             <div class="planetDetails_title">Description</div>
                             <div class="planetDetails_text planetDetails_text_2">
                                 <p>
-                                    The diameter of it is 12,100 km (7,522 miles).
+                                    The size of it is @Model.Planet.Size.
                                     The interior of it is composed of a central iron core and a molten rocky mantle, similar to the composition of Earth.
                                     The surface of it is very dry with flat plains, highland regions, and depressions.
                                     It is the sixth largest planet in the Solar System.

@@ -1,0 +1,154 @@
+﻿
+.properties {
+    padding-top: 94px;
+    padding-bottom: 99px;
+    background: #FFFFFF;
+}
+
+.properties_row {
+    margin-top: 60px;
+}
+
+.property {
+    width: 100%;
+    margin-bottom: 59px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+    .property:hover {
+        box-shadow: 0px 20px 20px rgba(0,0,0,0.35);
+    }
+
+.property_image {
+    width: 100%;
+}
+
+    .property_image img {
+        max-width: 100%;
+    }
+
+.property_tag {
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    height: 33px;
+    text-align: center;
+}
+
+    .property_tag a {
+        display: block;
+        padding-left: 15px;
+        padding-right: 13px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 33px;
+    }
+
+.tag_featured {
+    background: #ff2d6d;
+}
+
+.tag_offer {
+    background: #f3b715;
+}
+
+.tag_new {
+    width: 87px;
+    background: #34e69d;
+}
+
+.property_body {
+    padding-top: 33px;
+    padding-bottom: 35px;
+    background: #eff2f6;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.property:hover .property_body {
+    background: #FFFFFF;
+}
+
+.property_location {
+    font-size: 12px;
+    font-weight: 400;
+    color: #8c8c8c;
+    line-height: 0.75;
+}
+
+.property_title {
+    margin-top: 11px;
+}
+
+    .property_title a {
+        font-size: 22px;
+        font-weight: 500;
+        color: #252525;
+        line-height: 1.2;
+        -webkit-transition: all 200ms ease;
+        -moz-transition: all 200ms ease;
+        -ms-transition: all 200ms ease;
+        -o-transition: all 200ms ease;
+        transition: all 200ms ease;
+    }
+
+        .property_title a:hover {
+            color: #3f6fce;
+        }
+
+.property_price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3f6fce;
+    line-height: 0.75;
+    margin-top: 21px;
+}
+
+.property_footer {
+    width: 100%;
+    height: 52px;
+    background: #282828;
+    color: #FFFFFF;
+    padding-left: 15px;
+    padding-right: 5px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+    .property_footer > div:not(:last-child) {
+        margin-right: 20px;
+    }
+
+.property_icon {
+    display: inline-block;
+    width: 23px;
+    height: 14px;
+    margin-right: 8px;
+}
+
+.property_icon img {
+    max-width: 100%;
+}
+
+.property_footer span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.property:hover .property_footer {
+    background: #3f6fce;
+}
+
+

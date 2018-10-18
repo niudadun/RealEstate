@@ -10,7 +10,7 @@ using RealEstate.Models;
 namespace RealEstate.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20181017234940_Initial")]
+    [Migration("20181018050558_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,21 +37,25 @@ namespace RealEstate.Migrations
 
                     b.Property<string>("Price");
 
+                    b.Property<string>("SellType");
+
                     b.Property<string>("Shape");
+
+                    b.Property<string>("Size");
 
                     b.HasKey("PlanetObjId");
 
                     b.ToTable("PlanetObjs");
 
                     b.HasData(
-                        new { PlanetObjId = 1, Color = "Yellow", DetailImage = "sednadetails.jpg", Image = "sedna.jpg", Name = "Sedna", Price = "1.5" },
-                        new { PlanetObjId = 2, Color = "Blue", DetailImage = "mercurydetails.jpg", Image = "mercury.jpg", Name = "Mercury", Price = "4.5" },
-                        new { PlanetObjId = 3, Color = "Yellow", DetailImage = "venusdetails.jpg", Image = "venus.jpg", Name = "Venus", Price = "1.5" },
-                        new { PlanetObjId = 4, Color = "Red", DetailImage = "lavadetails.jpg", Image = "lava.jpg", Name = "Lava", Price = "4.5" },
-                        new { PlanetObjId = 5, Color = "Yellow", DetailImage = "jupiterdetails.jpg", Image = "jupiter.jpg", Name = "Jupiter", Price = "2.5" },
-                        new { PlanetObjId = 6, Color = "Blue", DetailImage = "uranusdetails.jpg", Image = "uranus.jpg", Name = "Uranus", Price = "5.5" },
-                        new { PlanetObjId = 7, Color = "Yellow", DetailImage = "saturndetails.jpg", Image = "saturn.jpg", Name = "Saturn", Price = "2.5" },
-                        new { PlanetObjId = 8, Color = "Yellow", DetailImage = "x-3details.jpg", Image = "x-3.jpg", Name = "X-3", Price = "2.5" }
+                        new { PlanetObjId = 1, Color = "Yellow", DetailImage = "sednadetails.jpg", Image = "sedna.jpg", Name = "Sedna", Price = "1.5", SellType = "Featured", Shape = "Round", Size = "Average" },
+                        new { PlanetObjId = 2, Color = "Grey", DetailImage = "mercurydetails.jpg", Image = "mercury.jpg", Name = "Mercury", Price = "4.5", SellType = "New", Shape = "Sphere", Size = "Large" },
+                        new { PlanetObjId = 3, Color = "Yellow", DetailImage = "venusdetails.jpg", Image = "venus.jpg", Name = "Venus", Price = "1.5", SellType = "Offer", Shape = "Potato", Size = "Small" },
+                        new { PlanetObjId = 4, Color = "Red", DetailImage = "lavadetails.jpg", Image = "lava.jpg", Name = "Lava", Price = "4.5", SellType = "On Sale", Shape = "Sphere", Size = "Large" },
+                        new { PlanetObjId = 5, Color = "Yellow", DetailImage = "jupiterdetails.jpg", Image = "jupiter.jpg", Name = "Jupiter", Price = "2.5", SellType = "Featured", Shape = "Round", Size = "Average" },
+                        new { PlanetObjId = 6, Color = "Blue", DetailImage = "uranusdetails.jpg", Image = "uranus.jpg", Name = "Uranus", Price = "5.5", SellType = "Offer", Shape = "Potato", Size = "Large" },
+                        new { PlanetObjId = 7, Color = "Yellow", DetailImage = "saturndetails.jpg", Image = "saturn.jpg", Name = "Saturn", Price = "2.5", SellType = "Featured", Shape = "Round", Size = "Large" },
+                        new { PlanetObjId = 8, Color = "Blue", DetailImage = "x-3details.jpg", Image = "x-3.jpg", Name = "X-3", Price = "2.5", SellType = "Featured", Shape = "Sphere", Size = "Average" }
                     );
                 });
 

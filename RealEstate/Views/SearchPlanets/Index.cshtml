@@ -1,0 +1,42 @@
+﻿@model RealEstate.ViewModels.PlanetViewModel
+@{
+    ViewData["Title"] = "Search Result";
+}
+
+<div class="properties">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title">25 Planet found</div>
+                <div class="section_subtitle">Search your dream Planet</div>
+            </div>
+        </div>
+        <div class="row properties_row">
+        @foreach (var planetObj in @Model.Planets)
+        {
+
+            <div class="col-xl-4 col-lg-6 property_col">
+                <div class="property">
+                    <div class="property_image">
+                        <img src="~/images/@planetObj.Image" alt="">
+                        <div class="tag_featured property_tag"><a asp-action="Index" asp-controller="PlanetDetails" asp-route-id="@planetObj.PlanetObjId">@planetObj.SellType</a></div>
+                    </div>
+                    <div class="property_body text-center">
+                        <div class="property_location">Solar system</div>
+                        <div class="property_title"><a asp-action="Index" asp-controller="PlanetDetails" asp-route-id="@planetObj.PlanetObjId">@planetObj.Name</a></div>
+                        <div class="property_price">$@planetObj.Price million</div>
+                    </div>
+                    <div class="property_footer d-flex flex-row align-items-center justify-content-start">
+                        <div><div class="property_icon"><img src="images/icon_1.png" alt=""></div><span>@planetObj.Shape</span></div>
+                        <div><div class="property_icon"><img src="images/icon_2.png" alt=""></div><span>@planetObj.Color</span></div>
+                        <div><div class="property_icon"><img src="images/icon_3.png" alt=""></div><span></span>@planetObj.Size</div>
+                    </div>
+                </div>
+            </div>
+        }
+ 
+
+        </div>
+    </div>
+</div>
+

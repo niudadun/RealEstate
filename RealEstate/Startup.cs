@@ -36,10 +36,9 @@ namespace RealEstate
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            // Automatically perform database migration Configuration.GetConnectionString("MyDbConnection")
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
+            // Automatically perform database migration 
             services.AddDbContext<DBContext>
-                (options => options.UseSqlServer(connection));
+                (options => options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
             services.ConfigureCors();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
